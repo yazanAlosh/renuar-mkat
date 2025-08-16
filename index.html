@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renuar Finder</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header>
+    <h1>🔎 Renuar Finder</h1>
+  </header>
+
+  <main>
+    <input type="text" id="code" placeholder="הכנס מק״ט או שם פריט...">
+    <div class="btns">
+      <button onclick="searchLocal()">חפש באתר שלי</button>
+      <button onclick="searchRenuar()">חפש ברנואר כאן</button>
+      <button onclick="openNew()">פתח ברנואר בטאב חדש</button>
+      <button onclick="scanCode()">📷 סרוק מצלמה</button>
+    </div>
+    <p id="msg"></p>
+    <iframe id="frame"></iframe>
+  </main>
+
+  <section id="host-panel">
+    <h2>👨‍💻 כניסת Host</h2>
+    <input type="password" id="host-pass" placeholder="סיסמה">
+    <button onclick="loginHost()">כניסה</button>
+    <div id="host-area" style="display:none;">
+      <h3>ניהול פריטים</h3>
+      <input type="text" id="sku" placeholder="מק״ט">
+      <input type="text" id="name" placeholder="שם">
+      <input type="number" id="price" placeholder="מחיר">
+      <input type="text" id="link" placeholder="קישור לרנואר">
+      <button onclick="addItem()">הוסף פריט</button>
+      <ul id="items"></ul>
+    </div>
+  </section>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
